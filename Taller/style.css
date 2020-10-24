@@ -1,0 +1,23 @@
+body {
+    background-image: url(./bg2.jpg);
+  }
+  h1 {
+    background-color: lightslategrey;
+    font-family: Arial;
+  }
+ div {
+   background-color: lightslategrey;
+   font-family: Arial;
+ }
+ a {
+     float: right;
+     text-decoration: none;
+    }
+  @media screen and (min-width: 1000px) {
+    body {
+      background-image: url(./bg.jpg);
+    }
+    div {
+      font-family: Arial;
+    }
+  }

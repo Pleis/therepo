@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+    <head>
+      <title>CAR WORK</title>
+      <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+    <div>
+       <h1> CAR WORK </h1>
+       <p> Spare Parts </p>
+        <label for="brand">BRAND</label>
+        <select id="brand" name="brand" onchange="carfun()">
+            <option value="0" selected>-
+            <option value="1">Fiat
+            <option value="2">Ford
+            <option value="3">Chevrolet
+            <option value="4">Dodge
+            <option value="5">Renault
+            <option value="6">Peugeot       
+            <option value="7">Volkswagen
+          </select>
+       <label for="brand">MODEL</label>
+        <select id="model" name="model">
+          <option value="-">-
+        </select>
+        <label for="pname">Search by Part</label>
+        <input type="text" id="part">
+        <input type="submit" value="Go" id="go">
+       <a href="./addstock.html"> Add Stock </a>
+       </div>
+       <table>
+        <thead>
+          <tr>
+              <th>Element</th>
+              <th>Price</th>
+              <th>Stock</th>
+          </tr>
+        </thead>
+        <tbody id="element">
+        </tbody>
+       </table> 
+       <script>
+        var fiat = ["-","punto"];
+        var ford = ["-","ka"];
+        var chevrolet = ["-","corsa"];
+        var dodge = ["-","1500"];
+        var renault = ["-","12"];
+        var peugeot = ["-","206"];
+        var volkswagen = ["-","gol"];      
+        var allbrands = [
+          [],
+          fiat,
+          ford,
+          chevrolet,
+          dodge,
+          renault,
+          peugeot,
+          volkswagen,
+        ];
+        function carfun(){ 
+           var brandselect 
+           brandselect = document.brand[document.brand.selectedIndex].value  
+           if (brandselect != 0) { 
+              models=allbrands[brandselect]
+              nummodels = models.length 
+              document.model.length = nummodels 
+              for(i=0;i<num_provincias;i++){ 
+                 document.model.options[i].value=models[i] 
+                 document.model.options[i].text=models[i] 
+              }	
+           }else{ 
+              document.model.length = 1 
+              document.model.options[0].value = "-" 
+              document.model.options[0].text = "-" 
+           }  
+           document.model.options[0].selected = true 
+      }
+        </script>
+       <script src="./sistem.js"></script>
+       
+    </body>
+</html>    

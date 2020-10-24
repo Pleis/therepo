@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+    <head>
+      <title>CAR WORK</title>
+      <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+      <div>
+       <h1> ADD STOCK </h1>
+       
+       
+  
+        <label for="brand">BRAND</label>
+          <select id="brand" name="brand">
+            <option></option>
+            <option>Fiat</option>
+            <option>Ford</option>
+            <option>Chevrolet</option>
+            <option>Dodge</option>
+            <option>Renault</option>
+            <option>Peugeot</option>       
+            <option>Volkswagen</option>
+            </select>
+       <label for="model">MODEL</label>
+        <input type="text" name="model" id="model">
+       <label for="part">Part</label>
+        <input type="text" name="part" id="part">
+       <label for="subpart">Subpart</label>
+        <input type="text" id="subpart" name="subpart">
+       <label for="price">Price</label>
+        <input type="text" id="price" name="price">
+        <input type="submit" value="Go" id="go">
+        <a href="./index.html"> Go Back </a> 
+      </div>
+       
+       <table>
+        <thead>
+          <tr>
+              <th>Element</th>
+              <th>Price</th>
+              <th>Stock</th>
+          </tr>
+        </thead>
+        <tbody id="show">
+
+        </tbody>
+       </table> 
+       
+       <script src="./carstock.js"></script>
+    </body>
+</html>    
